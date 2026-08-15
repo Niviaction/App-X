@@ -1,0 +1,16 @@
+# Rust build output
+backend/target/
+
+# Node dependencies
+frontend/node_modules/
+
+# Next.js build output
+frontend/.next/
+
+# Environment files / secrets
+.env
+.env.local
+.env.*.local
+
+# macOS
+.DS_Store
