@@ -1,0 +1,225 @@
+/* login.css */
+
+/* Wrapper to center the login card on the screen */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding: 20px;
+}
+
+/* The main login container */
+.login-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-header h2 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  color: #333333;
+}
+
+.login-header p {
+  margin: 0;
+  font-size: 16px;
+  color: #666666;
+}
+
+/* Form Styles */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-group input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  font-size: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #333333;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #007aff;
+}
+
+.input-group input::placeholder {
+  color: #999999;
+}
+
+/* Password Toggle Visibility */
+.password-group input {
+  padding-right: 48px; /* Make room for the icon */
+}
+
+.eye-button {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #666666;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* Forgot Password */
+.forgot-password-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -8px;
+}
+
+.forgot-password-text {
+  background: none;
+  border: none;
+  color: #007aff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.forgot-password-text:hover {
+  text-decoration: underline;
+}
+
+/* Primary Button */
+.btn-primary {
+  height: 52px;
+  background-color: #007aff;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: #0062cc;
+}
+
+/* Divider line with 'OR' */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 24px 0;
+  color: #999999;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.divider span {
+  padding: 0 16px;
+}
+
+/* Social Buttons */
+.social-login-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: opacity 0.2s ease;
+}
+
+.btn-social:hover {
+  opacity: 0.9;
+}
+
+.social-icon {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.btn-apple {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.btn-google {
+  background-color: #ffffff;
+  color: #333333;
+  border-color: #e0e0e0;
+}
+
+.btn-facebook {
+  background-color: #1877f2;
+  color: #ffffff;
+}
+
+/* Footer (Sign Up) */
+.login-footer {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.login-footer p {
+  color: #666666;
+  font-size: 15px;
+  margin: 0;
+}
+
+.signup-text {
+  background: none;
+  border: none;
+  color: #007aff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+}
+
+.signup-text:hover {
+  text-decoration: underline;
+}
