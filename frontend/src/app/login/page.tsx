@@ -1,17 +1,20 @@
 "use client";
 
 import React, { useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { FaApple, FaGoogle, FaFacebookF, FaEye, FaEyeSlash } from 'react-icons/fa';
 import './login.css';
 
 const Login: React.FC = () => {
+  const router = useRouter();
   const [identifier, setIdentifier] = useState('');
   const [password, setPassword] = useState('');
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!identifier || !password) {
       alert('Please enter both your identifier and password.');
       return;
@@ -33,6 +36,10 @@ const Login: React.FC = () => {
         headers: {
           'Content-Type': 'application/json',
         },
+        // The backend sets the session as an httpOnly cookie, not a JSON token.
+        // `credentials: 'include'` is required for the browser to store/send it
+        // cross-origin (frontend and backend are on different domains).
+        credentials: 'include',
         body: JSON.stringify({ identifier, password }),
       });
 
@@ -42,11 +49,8 @@ const Login: React.FC = () => {
         throw new Error(errorData.message || 'Login failed. Please check your credentials.');
       }
 
-      // 4. Handle success
-      const data = await response.json();
-      console.log('Login successful!', data);
-      
-      // TODO: Save your token or redirect the user here
+      // 4. Handle success — session cookie is already set by the browser, just redirect
+      router.push('/');
 
     } catch (error) {
       console.error('Error during login:', error);
@@ -164,7 +168,7 @@ const Login: React.FC = () => {
         {/* Sign Up Link */}
         <div className="login-footer">
           <p>
-            Don&apos;t have an account? <button className="signup-text">Sign Up</button>
+            Don&apos;t have an account? <Link href="/signup" className="signup-text">Sign Up</Link>
           </p>
         </div>
       </div>
