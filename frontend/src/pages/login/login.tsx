@@ -164,7 +164,7 @@ const Login: React.FC = () => {
         {/* Sign Up Link */}
         <div className="login-footer">
           <p>
-            Don't have an account? <button className="signup-text">Sign Up</button>
+            Don&apos;t have an account? <button className="signup-text">Sign Up</button>
           </p>
         </div>
       </div>
